@@ -1,0 +1,48 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "Block Image|Video"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "commands": {
+      "_execute_action": {
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "data/content_script/inject.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Easily block all images & videos within a website!",
+   "homepage_url": "https://mybrowseraddon.com/block-image-video.html",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlurgt0Ykv740tjk1ebeiSX6UVVRRhxVvh+FvRMTe9PKzkAKUDEW2IjNUz1swxZA8ILnMvtyamAfiErTOxUFB8+zCADU/CK2YEhqUJo3tmHCg6EP2XJL220ZXjmIeft1AqJV1BmGRLhm8VnH8dJ2EThfcflx4JEdlh0/aLJr6UVjF2hPVX8JLAMTVjEfiC82KDNGgXDADqBm3E/6n+Dx+3KhgIYTXKIMk+qRVaOhjAJLh8a9OrDBwpylP5RDifTAyVVa9UOyoLNqynzC9oLabWUr1ovWAOiivhYknFCXnl5q971iNSFpmjc+ZW+aK+TRjMnJF84IeA170corVG3KgnwIDAQAA",
+   "manifest_version": 3,
+   "name": "Block Image|Video",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "data/options/options.html"
+   },
+   "permissions": [ "storage", "declarativeNetRequest" ],
+   "update_url": "https://owagent/chrome/extension/image/block",
+   "version": "1.0.0",
+   "web_accessible_resources": [
+    {
+      "resources": ["data/config/info.json"]
+    }
+  ]
+}
